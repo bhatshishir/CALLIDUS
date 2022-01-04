@@ -1,0 +1,27 @@
+<?php
+
+$con = mysqli_connect("localhost","root","PASSWORD","my_school");
+
+if (mysqli_connect_errno())
+{ 
+echo mysqli_error($con);
+exit();
+}
+
+$imgbinarydata = mysqli_real_escape_string($con, file_get_contents("/var/www/example.com/public_html/image.jpg" ));
+
+$sql= "INSERT INTO students (student_id, student_name, photo) VALUES ('1','JOHN DOE','$imgbinarydata')";
+
+if (!mysqli_query($con,$sql)){
+echo mysqli_error($con);
+}
+
+else {
+
+echo "Record inserted successfully";
+
+}
+
+mysqli_close($con);
+
+?>

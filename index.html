@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callidus</title>
+    <link rel="stylesheet" href="style.css">
+    <script>
+        history.pushState(null, null, null);
+        window.addEventListener('popstate', function () {        //to disable back button after logout.
+            history.pushState(null, null, null);
+        });
+      </script>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <div class="logobox"></div>
+        </div>
+        <div class="signup">
+            <div class="signupcontainer">
+                <h2 id="heading">Login</h2>
+                <form action="login1.php" method="post">
+                    <input type="text" placeholder="Username" name="username" id="s1"><br>
+                    <input type="password" placeholder="Password" name="password" id="s2"><br>
+                    <!-- <input type="text" placeholder="Type" name="type" id="s3"><br> -->
+
+                    <select id="typeid" name="type">
+                        <option value="Student" >Student</option>
+                        <option value="Faculty" >Faculty</option>
+                        <option value="Admin">Admin</option>
+                    </select>
+                    <input type="submit" value="Login" id="s4">
+
+
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

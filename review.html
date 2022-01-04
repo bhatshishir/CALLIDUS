@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: url(images/library.jpg);
+            background-position: center;
+            background-size: cover;
+            width: 100%;
+            height: 100vh;
+        }
+
+        form {
+            width: 350px;
+            height: 425px;
+            border: 1px solid grey;
+            border-radius: 10px;
+            background-color: transparent;
+            position: relative;
+            background-image: linear-gradient(rgba(211, 210, 210, 0.452),transparent);
+            /* box-shadow: 0px 0px 30px rgb(114, 114, 114); */
+        }
+
+        input {
+            padding: 10px;
+            position: absolute;
+        }
+
+        h2 {
+            position: absolute;
+            left: 39%;
+            top: 10%;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        #desc {
+            left: 14%;
+            top: 24%;
+            width: 252px;
+            height: 100px;
+            border-radius: 8px;
+            border:none;
+        }
+
+        #stars {
+            left: 18%;
+            top: 59%;
+            border-radius: 8px;
+            border:none;
+        }
+
+        #btn {
+            top: 80%;
+            left: 36%;
+            width: 96px;
+            border-radius: 8px;
+            border: none;
+            height: 40px;
+        }
+
+        input::placeholder{
+            text-align: center;
+        }
+
+        #btn:hover{
+            background-color: grey;
+            transition-duration: 0.2s;
+            color:white;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 mb-4 border-bottom">
+          
+        <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="./images/calliduslogo"/></svg>
+        </a>
+
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 " >
+                <li><a href="student.php" class="nav-link px-4 link-dark" id="mynav">Dashboard</a></li>
+                <li><a href="review.html" class="nav-link px-4 link-dark" id="mynav">Review</a></li>
+                <li><a href="forum.html" class="nav-link px-4 link-dark" id="mynav">Forum</a></li>
+                <li><a href="#" class="nav-link px-4 link-dark" id="mynav">About</a></li>
+        </ul>
+  
+        <!-- <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+          <li id="user">Course</li>
+        </ul> -->
+
+        <div class="dropdown text-end"  style="padding-right:20%;">
+                <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+                  <img src="./images/user.png" alt="mdo" width="42" height="42" class="rounded-circle">
+                </a>
+                <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                  <li><a class="dropdown-item" href="#">Settings</a></li>
+                  <li><a class="dropdown-item" href="#">Profile</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="./index.html">Sign out</a></li>
+                </ul>
+        </div>
+  
+        <!-- <div class="col-md-3 text-end">
+          <button type="button" class="btn btn-outline-primary me-2">Logout</button>
+        </div> -->
+      </header>
+    <div class="container">
+
+        <form action="review.php" method="post">
+            <h2>Review</h2>
+            <input type="text" id="desc" name="desc" placeholder="Place your review here"><br />
+            <input type="text" id="stars" name="stars" placeholder="Stars"><br />
+            <input type="submit" id="btn" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
