@@ -313,7 +313,7 @@ include 'uploadassign.php';
                   <input type="file" class="form-control rounded-4" id="img" >
                   <label for="img">Image</label>
                 </div> -->
-                <small style="opacity: 0.8;font-weight:600;padding-left: 14px;">Upload Image</small>
+                <small style="opacity: 0.8;font-weight:600;padding-left: 14px;">Upload File</small>
                 <div class="input-group mb-4">
                   <input type="file" class="form-control" id="img" name="upfile">
                    <!-- name="upimg" -->
